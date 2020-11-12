@@ -17,6 +17,15 @@ git reset HEAD <filename>:将修改从暂存区回撤，相当于撤销修改的
 git reflog:查看历史操作日志，从中可以得知历史上有过的各种版本的ID，从而可以结果git reset找到任意版本
 git restore filename:从工作区撤销修改
 
+//建立分布式版本库
+将本地git版本库与远程版本库进行关联：
+git add remote origin git@github.com:shixiangyyy/learnCPP.git
+将本地git版本库的全部内容推送到远程库上：
+第一次推送：git push -u origin master
+后续：git push origin master
+因为第一次推送master时，远程库是空的，因此需要加上-u参数，在将本地master推送到远程master上时，将两地master进行关联
+因此，后续push或者pull的时候就可以简化命令
+
 //撤销修改的若干种场景
 场景1：修改目前只在工作区，还没有被add到暂存区，git restore filename,直接从工作区进行撤销即可
 场景2：修改已经被add到暂存区了，但是还没有被commit，git reset HEAD <filename>,先从暂存区回撤到工作区，然后git restore filename,从工作区撤销修改
