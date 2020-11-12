@@ -37,5 +37,5 @@ git add remote origin git@github.com:shixiangyyy/learnCPP.git
 创建+切换：git switch -c <branchName>
 合并某分支到当前分支：git merge <branchName>
 删除分支：git branch -d <branchName>
-
-test
+bug分支：git stash保存手头工作，然后修复bug，再git stash pop恢复工作现场
+要将master分支上修复的bug，合并到dev分支，用git cherry-pick <commit>命令，把bug提交的修改复制到当前分支，避免重复劳动
