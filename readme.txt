@@ -37,3 +37,5 @@ git add remote origin git@github.com:shixiangyyy/learnCPP.git
 创建+切换：git switch -c <branchName>
 合并某分支到当前分支：git merge <branchName>
 删除分支：git branch -d <branchName>
+
+test the branch management
