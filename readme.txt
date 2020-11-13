@@ -29,6 +29,7 @@ git add remote origin git@github.com:shixiangyyy/learnCPP.git
 后续：git push origin master
 因为第一次推送master时，远程库是空的，因此需要加上-u参数，在将本地master推送到远程master上时，将两地master进行关联
 因此，后续push或者pull的时候就可以简化命令
+从远程仓库取回变化，并与本地分支合并：git pull [remote] [branch]
 
 //分支管理
 查看分支：git branch
