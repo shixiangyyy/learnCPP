@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 
+//一般来说，一个类中如果定义了虚函数，那么其析构函数也应该定义为虚函数
 class base
 {
 public:
@@ -14,14 +15,14 @@ public:
 	}
 };
 
-class der :public base
+class der:public base
 {
 public:
 	der()
 	{
-		cout << "der" << endl;
+		cout << "Derived" << endl;
 	}
-	virtual ~der()
+	~der()
 	{
 		cout << "~der" << endl;
 	}
@@ -30,24 +31,22 @@ public:
 class der1 :public der
 {
 public:
-	der1() {
+	der1()
+	{
 		cout << "der1" << endl;
 	}
-	virtual ~der1() {
+	~der1()
+	{
 		cout << "~der1" << endl;
 	}
 };
 
-int main() {
-	base *Der = new der;
-	cout << endl;
-	der *Der1 = new der1;
-	cout << endl;
-
-	delete Der;
-	cout << endl;
+int main()
+{
+	base* b = new der;
+	der* Der1 = new der1;
+	delete b;
 	delete Der1;
-	cout << endl;
 
 	return 0;
 }
