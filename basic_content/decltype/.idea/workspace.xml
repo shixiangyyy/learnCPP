@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="untitled" targetName="demo" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="80776f83-a818-45d3-b099-1780b3c34544" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/decltype.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/decltypeRecLaws.cpp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CMakeLists.txt" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1kVlU5TRI6LDU6y6d56aneZEHBw" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="cf.first.check.clang-format" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/CMakeLists.txt" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RunManager" selected="CMake Application.decltypeRecLaws">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="decltypeRecLaws" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_PATH="$PROJECT_DIR$/decltypeRecLaws.exe" EXPLICIT_BUILD_TARGET_NAME="all">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Makefile" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+      <makefile filename="$PROJECT_DIR$/cmake-build-debug/Makefile" target="" workingDirectory="" arguments="">
+        <envs />
+      </makefile>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="CMake Application.decltypeRecLaws" />
+      <item itemvalue="Makefile.Makefile" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Makefile.Makefile" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="80776f83-a818-45d3-b099-1780b3c34544" name="Default Changelist" comment="" />
+      <created>1605793652950</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1605793652950</updated>
+      <workItem from="1605793654332" duration="3529000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1384" y="247" width="1084" height="715" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605797034048">
+      <screen x="0" y="27" width="2560" height="1362" />
+    </state>
+    <state x="1384" y="247" width="1084" height="715" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.2560.1362@0.27.2560.1362" timestamp="1605797034048" />
+    <state x="1703" y="465" width="424" height="484" key="FileChooserDialogImpl" timestamp="1605796674591">
+      <screen x="0" y="27" width="2560" height="1362" />
+    </state>
+    <state x="1703" y="465" width="424" height="484" key="FileChooserDialogImpl/0.27.2560.1362@0.27.2560.1362" timestamp="1605796674591" />
+    <state width="606" height="474" key="GridCell.Tab.0.bottom" timestamp="1605796935193">
+      <screen x="0" y="27" width="2560" height="1362" />
+    </state>
+    <state width="606" height="474" key="GridCell.Tab.0.bottom/0.27.2560.1362@0.27.2560.1362" timestamp="1605796935193" />
+    <state width="606" height="474" key="GridCell.Tab.0.center" timestamp="1605796935193">
+      <screen x="0" y="27" width="2560" height="1362" />
+    </state>
+    <state width="606" height="474" key="GridCell.Tab.0.center/0.27.2560.1362@0.27.2560.1362" timestamp="1605796935193" />
+    <state width="606" height="474" key="GridCell.Tab.0.left" timestamp="1605796935193">
+      <screen x="0" y="27" width="2560" height="1362" />
+    </state>
+    <state width="606" height="474" key="GridCell.Tab.0.left/0.27.2560.1362@0.27.2560.1362" timestamp="1605796935193" />
+    <state width="606" height="474" key="GridCell.Tab.0.right" timestamp="1605796935193">
+      <screen x="0" y="27" width="2560" height="1362" />
+    </state>
+    <state width="606" height="474" key="GridCell.Tab.0.right/0.27.2560.1362@0.27.2560.1362" timestamp="1605796935193" />
+    <state width="606" height="474" key="GridCell.Tab.1.bottom" timestamp="1605796935194">
+      <screen x="0" y="27" width="2560" height="1362" />
+    </state>
+    <state width="606" height="474" key="GridCell.Tab.1.bottom/0.27.2560.1362@0.27.2560.1362" timestamp="1605796935194" />
+    <state width="606" height="474" key="GridCell.Tab.1.center" timestamp="1605796935193">
+      <screen x="0" y="27" width="2560" height="1362" />
+    </state>
+    <state width="606" height="474" key="GridCell.Tab.1.center/0.27.2560.1362@0.27.2560.1362" timestamp="1605796935193" />
+    <state width="606" height="474" key="GridCell.Tab.1.left" timestamp="1605796935193">
+      <screen x="0" y="27" width="2560" height="1362" />
+    </state>
+    <state width="606" height="474" key="GridCell.Tab.1.left/0.27.2560.1362@0.27.2560.1362" timestamp="1605796935193" />
+    <state width="606" height="474" key="GridCell.Tab.1.right" timestamp="1605796935194">
+      <screen x="0" y="27" width="2560" height="1362" />
+    </state>
+    <state width="606" height="474" key="GridCell.Tab.1.right/0.27.2560.1362@0.27.2560.1362" timestamp="1605796935194" />
+    <state x="1435" y="342" key="SettingsEditor" timestamp="1605796342433">
+      <screen x="0" y="27" width="2560" height="1362" />
+    </state>
+    <state x="1435" y="342" key="SettingsEditor/0.27.2560.1362@0.27.2560.1362" timestamp="1605796342433" />
+    <state x="1617" y="335" width="672" height="678" key="search.everywhere.popup" timestamp="1605795132271">
+      <screen x="0" y="27" width="2560" height="1362" />
+    </state>
+    <state x="1617" y="335" width="672" height="678" key="search.everywhere.popup/0.27.2560.1362@0.27.2560.1362" timestamp="1605795132271" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/decltypeRecLaws.cpp</url>
+          <line>45</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/decltypeRecLaws.cpp</url>
+          <line>44</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
