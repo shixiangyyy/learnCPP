@@ -5,7 +5,7 @@ class A
 {
 public:
 	int a;
-	A(int i) :a(i) { cout << "Virtual base A: " << endl; }
+	A(int i) :a(i) { cout << "Virtual base A: " << a << endl; }
 };
 
 class B :virtual public A
@@ -30,6 +30,11 @@ public:
 
 int main()
 {
+	/*Virtual base A : 3
+	Virtual base C :
+	Virtual base B :
+	Contructing ABC :*/
+	//可见虚基类A的构造只调用了一次
 	ABC abc(1, 2, 3);
 	//构造顺序A C B ABC
 	system("pause");
