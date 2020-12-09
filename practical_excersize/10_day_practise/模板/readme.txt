@@ -67,6 +67,7 @@ template <class T1, class T2, ...> 返回类型 函数名(参数列表)
 	private:
 		double data[size];
 	};
+	//或者
 	class charStack{
 	private:
 		char data[size];
