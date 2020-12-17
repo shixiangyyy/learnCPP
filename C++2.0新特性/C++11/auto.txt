@@ -1,0 +1,11 @@
+自动类型推导
+不要因为有auto就什么都写auto
+
+使用auto特别有用于type特别长，或者说type实在是很复杂的时候：
+	迭代器，复杂的数据结构类型
+	
+auto L = [](int)->bool{...};
+	L表示lambda类型
+	L has the type of a lambda taking an int  and returning a bool;
+	The latter is an object, representing a lambda;
+	

@@ -1,0 +1,23 @@
+C++ alias template
+
+type alias(类型别名)
+	type alias就是将某一个type重新命名为另一个更加直观的名字(重命名)
+	
+两种重命名的方法：
+typedef:
+	typedef [original-type] [your-alias];
+	例如：
+	typedef int Pixel;
+	typedef std::map<std::string, std::vector<std:string>> Map;
+using:
+	using [your-alias] = [original-type];
+	例如：
+	using Pixel = int;
+	using Map = std::map<std::string, std::vector<std::string>>;
+	
+typedef和using的区别：
+	typedef不能和template一起使用；
+	只有using才可以使用template。
+	
+alias template:
+	使用using给模板类取一个别名
