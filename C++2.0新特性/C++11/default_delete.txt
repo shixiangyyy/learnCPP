@@ -1,0 +1,27 @@
+什么时候空类不再是空类呢？
+	当C++处理过它以后，会为空类声明copy ctor, copy assignment operator和一个dtor；
+	如果没有声明ctor,编译器也会为其声明default ctor，
+	所有这些函数都是public且inline
+
+complex<T>有所谓的big-three吗？
+	类中有指针成员时，几乎可以断定需要big-three；
+	如果类中没有指针成员，可以说不需要自己定义big-three.
+	指针存在浅拷贝与深拷贝，包含指针成员的类，不仅有big-three，甚至有big-five(move ctor);
+	
+如果设计一个类不准让人拷贝的话：
+	struct NoCopy
+	{
+		NoCopy() = default;
+		NoCopy(cont NoCopy&) = delete; //不让拷贝
+		NoCopy& operator=(const NoCopy&) = delete; //no assignment ctor
+		~NoCopy() = default;
+	}
+	类似可以定义没有析构函数的类：
+	struct NoDtor
+	{
+		NoDtor() = default;
+		~NoDtor() = delete;
+	}
+	NoDtor nd; //error. NoDtor dtor is deleted
+	NoDtor* p = new NoDtor(); //Ok, but we can't delete p
+	delete p; //Error, NoDtor dtor is deleted

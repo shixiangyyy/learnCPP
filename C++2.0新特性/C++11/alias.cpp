@@ -5,11 +5,12 @@ using namespace std;
 //Because an alias-declaration cannot declare a template-id, 
 //it is not possible to partially or explictly specialize an 
 //alias template
+//不能对化名做全特化或者偏特化，需要特化的话，需要对本名模板进行特化
 template <typename T>
 using Vec = vector<T, allocator<T>>;
 //使用宏定义不行
 //#define Vec<T> template<typename T> vector<T,allocator<T>>;
-//宏是简单的替换
+//宏是简单的替换,使用macro难以达到using相同的效果
 
 int main()
 {
