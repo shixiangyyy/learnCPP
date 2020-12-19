@@ -2,6 +2,8 @@
 #include <string>
 using namespace std;
 
+//µÝ¹é¸´ºÏ
+//recursive composition
 namespace light
 {
 	template <typename...Values> class tuple;

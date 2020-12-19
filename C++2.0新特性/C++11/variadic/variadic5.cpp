@@ -5,6 +5,7 @@
 using namespace std;
 
 //tuple递归调用
+//知道有几个元素的同时，还要知道当前处理第几个
 template <int IDX, int MAX, typename...Args>
 struct print_tuple
 {
@@ -15,7 +16,7 @@ struct print_tuple
 	}
 };
 
-//偏特化
+//偏特化，凡是特化的，优先级相对泛化模板优先级就更高些
 template <int MAX, typename...Args>
 struct print_tuple<MAX, MAX, Args...>
 {

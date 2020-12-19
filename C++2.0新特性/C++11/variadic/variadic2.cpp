@@ -19,7 +19,7 @@ void print(const char* s, T value, const Args&...args)
 		if (*s == '%' && *(++s) != '%')
 		{
 			std::cout << value;
-			print(++s, args...);
+			print(++s, args...);//call even *s == 0 to detect extra arguments
 			return;
 		}
 		cout << *s++;

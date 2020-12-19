@@ -12,7 +12,8 @@ void printx(const T& firstArg, const Args&...args)
 }
 
 //泛化版，泛化版可以接收任意参数
-//当存在上面的特化版本的模板的时候，下面的泛化模板将永远不被调用
+//当存在上面的特化版本的模板的时候，下面的泛化模板将永远不被调用,上面的模板更加特别
+//因此上面的优先调用
 template <typename T, typename...Args>
 void printx(const Args&...args)
 {

@@ -1,5 +1,6 @@
 //variadic5.cpp的例子为递归调用
 //该例子为递归继承
+//子类对象内存里面有个父类part
 #include <iostream>
 #include <string>
 using namespace std;
@@ -24,7 +25,7 @@ namespace light
 		tuple() {};
 		//本步初始化以后，变递归调用tuple模板类，直到参数包为0
 		tuple(Head h, Tail...tail) :m_head(h), inherited(tail...) {}
-		Head head() { return m_head; }
+		auto head() ->decltype(m_head) { return m_head; }
 		//将当前类型的对象转为一个inherited类型的对象
 		//内部什么机制，为何可以自动识别类别，并且可以识别对应的次序？
 		//如果模板参数类型为int,int,int，这里也可以正确确认tail包含的参数
