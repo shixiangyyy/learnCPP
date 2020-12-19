@@ -1,0 +1,39 @@
+一种新的引用类型，用以解决不必要复制的问题。
+
+使能perfect forwarding.(完美转发)
+
+When the right-side of an assignment is an rvalue,
+then the left-side object can steal resources from
+the right-side object rather than performing a separate
+allocation,thus enabling move semantics.
+
+Lvalue:变量，可以出现于operator=的左侧；
+rvalue:只能出现于operator=右侧。
+
+lvalue可以用于接受赋值。
+
+临时对象可以理解为没有名称，是一种右值。
+
+只要在内存中有确切存储空间的都是左值
+
+C++ with it user-defined types has introduced some
+subtileties regarding modiafibility and assignability
+that cause this difinition to be incorrect.
+
+不可以对右值取地址，右值没有确切地址；
+
+函数返回的是一种右值，不可以对函数返回直接取地址；
+
+C++希望：
+1.必须有语法让我们在调用端告诉编译器，这是个rvalue;
+2.必须有语法让我们在被调用端写出一个专门处理rvalue的
+所谓move assignment函数
+
+move就是指针的浅拷贝，所以：
+作为右值的，被赋值(浅拷贝)给对象以后，该右值将作废；
+原始存储空间最终也只有指针指向，就是得到赋值的对象。
+
+如果是左值，但是需要被当作右值进行赋值，可以这么做：
+	M c1(c);
+	M c2(std::move(c1)); //使用move必须确认后续不被使用
+	c1.swap(c2);
