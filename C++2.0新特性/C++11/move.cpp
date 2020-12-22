@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 #include <cstring>
 #include <vector>
 #include <list>
@@ -26,7 +27,7 @@ private:
 	size_t _len;
 	void _init_data(const char* s)
 	{
-		str = (char*)malloc(_len*sizeof(char));
+		str = (char*)malloc((_len + 1) * sizeof(char));
 		strcpy(str, s);
 		str[_len] = '\0';
 	}
@@ -96,7 +97,7 @@ private:
 	size_t _len;
 	void _init_data(const char* s)
 	{
-		str = (char*)malloc(_len * sizeof(char));
+		str = (char*)malloc((_len + 1) * sizeof(char));
 		strcpy(str, s);
 		str[_len] = '\0';
 	}
@@ -173,7 +174,7 @@ size_t MyString::Dtor = 0;
 namespace std
 {
 	template<>
-	struct hash<MyStringNoMove> :public __hash_base<size_t, MyStringNoMove>
+	struct hash<MyStringNoMove> :public  _Bitwise_hash<MyStringNoMove>
 	{
 		size_t operator()(const MyStringNoMove& s) const noexcept
 		{
@@ -182,7 +183,7 @@ namespace std
 	};
 
 	template<>
-	struct hash<MyString> :public __hash_base<size_t, MyString>
+	struct hash<MyString> :public _Bitwise_hash<MyString>
 	{
 		size_t operator()(const MyString& s) const noexcept
 		{
@@ -261,12 +262,19 @@ void test_moveable(M c1, NM c2, long &value) {
 }
 
 int main() {
-	long value = 3000;           
-	// vector 测试结果的MCtor与CCtor结果大于3000000,是因为vector的动态扩容,当容量不够的时候,会动态分配并进行拷贝。														 
-	 test_moveable(vector<MyString>(), vector<MyStringNoMove>(), value);
-	 test_moveable(list<MyString>(), list<MyStringNoMove>(), value);
-	 test_moveable(deque<MyString>(), deque<MyStringNoMove>(), value);
-	 test_moveable(multiset<MyString>(), multiset<MyStringNoMove>(), value);
-	 test_moveable(unordered_multiset<MyString>(), unordered_multiset<MyStringNoMove>(), value);
+	long value = 30000;           
+	// vector 测试结果的MCtor与CCtor结果大于3000000,是因为vector的动态扩容,当容量不够的时候,会动态分配并进行拷贝。	
+	cout << "============TEST WITH VECTOR=============\n";
+	test_moveable(vector<MyString>(), vector<MyStringNoMove>(), value);
+	cout << "============TEST WITH LIST=============\n";
+	test_moveable(list<MyString>(), list<MyStringNoMove>(), value);
+	cout << "============TEST WITH DEQUE=============\n";
+	test_moveable(deque<MyString>(), deque<MyStringNoMove>(), value);
+	cout << "============TEST WITH MULTISET=============\n";
+	test_moveable(multiset<MyString>(), multiset<MyStringNoMove>(), value);
+	cout << "============TEST WITH UNORDERED_SET=============\n";
+	test_moveable(unordered_multiset<MyString>(), unordered_multiset<MyStringNoMove>(), value);
+
+	system("pause");
 	return 0;
 }
