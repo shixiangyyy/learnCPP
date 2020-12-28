@@ -174,7 +174,7 @@ size_t MyString::Dtor = 0;
 namespace std
 {
 	template<>
-	struct hash<MyStringNoMove> :public  _Bitwise_hash<MyStringNoMove>
+	struct hash<MyStringNoMove>
 	{
 		size_t operator()(const MyStringNoMove& s) const noexcept
 		{
@@ -183,7 +183,7 @@ namespace std
 	};
 
 	template<>
-	struct hash<MyString> :public _Bitwise_hash<MyString>
+	struct hash<MyString>
 	{
 		size_t operator()(const MyString& s) const noexcept
 		{
