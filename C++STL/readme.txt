@@ -62,3 +62,11 @@ traits作为一个一个人为设计的机制，用于从迭代器中获取前�
 	因为iterator不一定是一个class，还有可能是一种指针，所以traits:
 	必须有能力分辨它所获得的iterator是class还是一种指向T的原生指针。利用偏特化即可实现
 	iterator traits用以分离class iterator和non-class iterator
+	
+stack和queue底层默认使用deque作为底部支撑
+	但是除了deque以外，也可以使用list作为底部支撑，但是默认的一般性能更好
+queue和stack都没有实现迭代器的功能
+queue不可以选择vector作为底层结构, vector没有pop操作，使用时有可能出错；
+stack可以使用vector作为底层结构；
+stack和queue都不可以选择set或者map作为底层结构。
+总结：编译器不会完整地检查模板类中的模板参数，只是会在运行时出现特定的错误。
