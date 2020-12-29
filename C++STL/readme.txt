@@ -47,3 +47,18 @@ list
 	typedef __list_iterator<T, T&, T*> iterator;
 	
 C++后++返回的是一个右值
+C++后++返回的是一个右值
+
+Iterator需要遵循的原则
+	是算法和容器的桥梁：算法提问->迭代器回答
+	Iterator必须提供的5中associated type:
+		iterator_catagory 
+		value_type 
+		pointer 
+		reference 
+		difference_type(两个迭代器之间的距离)
+
+traits作为一个一个人为设计的机制，用于从迭代器中获取前述五种类型(类型萃取机)
+	因为iterator不一定是一个class，还有可能是一种指针，所以traits:
+	必须有能力分辨它所获得的iterator是class还是一种指向T的原生指针。利用偏特化即可实现
+	iterator traits用以分离class iterator和non-class iterator
