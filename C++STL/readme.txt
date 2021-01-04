@@ -66,7 +66,15 @@ traits作为一个一个人为设计的机制，用于从迭代器中获取前�
 map允许元素的data被改变，只有元素的key是不可以改变的。如果要改变键值对，可以采用insert函数
 	rb_tree提供两种insertion操作：insert_unique()和insert_equal();
 	前者表示节点的key一定独一无二，后者表示可以重复。
-	
+
+stack和queue底层默认使用deque作为底部支撑
+	但是除了deque以外，也可以使用list作为底部支撑，但是默认的一般性能更好
+queue和stack都没有实现迭代器的功能
+queue不可以选择vector作为底层结构, vector没有pop操作，使用时有可能出错；
+stack可以使用vector作为底层结构；
+stack和queue都不可以选择set或者map作为底层结构。
+总结：编译器不会完整地检查模板类中的模板参数，只是会在运行时出现特定的错误。
+
 从语言层面讲
 	容器、迭代器、仿函数、适配器、分配器 都是class template
 	但是算法是个function template
