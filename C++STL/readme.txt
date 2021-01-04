@@ -62,3 +62,20 @@ traits作为一个一个人为设计的机制，用于从迭代器中获取前�
 	因为iterator不一定是一个class，还有可能是一种指针，所以traits:
 	必须有能力分辨它所获得的iterator是class还是一种指向T的原生指针。利用偏特化即可实现
 	iterator traits用以分离class iterator和non-class iterator
+	
+map允许元素的data被改变，只有元素的key是不可以改变的。如果要改变键值对，可以采用insert函数
+	rb_tree提供两种insertion操作：insert_unique()和insert_equal();
+	前者表示节点的key一定独一无二，后者表示可以重复。
+	
+从语言层面讲
+	容器、迭代器、仿函数、适配器、分配器 都是class template
+	但是算法是个function template
+	算法本身是看不到容器的，算法只知道依据自身的逻辑，借助迭代器处理容器
+	
+迭代器的分类
+	五种iterator categories：
+		struct input_iterator_tag{};
+		struct output_iterator_tag{};
+		struct forward_iterator_tag: public input_iterator_tag {};
+		struct bidirectional_iterator_tag: public forward_iterator_tag {};
+		struct random_access_iterator_Tag: public bidirectional_iterator_tag {};
