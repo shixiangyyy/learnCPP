@@ -16,7 +16,6 @@ void display_category(Typ itre)
 {
 	typename iterator_traits<Typ>::iterator_category catg;
 	_display_category(catg);
-	cout << "typeid(itre).name() = " << typeid(itre).name() << endl << endl;
 }
 
 void _display_category(input_iterator_tag)
@@ -79,25 +78,6 @@ int main()
 	cout << "ostream:";
 	display_category(ostream_iterator<int>(cout, ""));
 	
-	system("pause");
 	return 0;
 }
-
-/* Test iterator_category.......
-
-array:random_access_iterator_tag
-vector:random_access_iterator_tag
-list:bidirectional_iterator_tag
-forward_list:forward_iterator_tag
-deque:random_access_iterator_tag
-set:bidirectional_iterator_tag
-map:bidirectional_iterator_tag
-multiset:bidirectional_iterator_tag
-multimap:bidirectional_iterator_tag
-unordered_set:bidirectional_iterator_tag
-unordered_map:bidirectional_iterator_tag
-unordered_multiset:bidirectional_iterator_tag
-unordered_multimap:bidirectional_iterator_tag
-istream:input_iterator_tag
-ostream:output_iterator_tag */
 
