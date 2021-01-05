@@ -87,3 +87,139 @@ stack和queue都不可以选择set或者map作为底层结构。
 		struct forward_iterator_tag: public input_iterator_tag {};
 		struct bidirectional_iterator_tag: public forward_iterator_tag {};
 		struct random_access_iterator_Tag: public bidirectional_iterator_tag {};
+		
+算法：
+	实例：
+		accumulate，两个版本:
+			template <class InputIterator, class T> 
+				accumulate(InputIterator first, InputIterator last, T init);
+			template <class InputIterator, class T, class BinaryOp> 
+				accumulate(InputIterator first, InputIterator last, T init, BinaryOp binary_op);
+		for_each:
+			template <class InputIterator, class Function> 
+			Function for_each(InputIterator first, InputIterator last, Function f);
+		replace, replace_if, replace_copy
+		count, count_if:注意容器里面有没有带同名的算法函数
+		find, find_if
+		sort:只有容器list和forward_list具有内置算法sort，像vector array这些都是用公用的sort函数
+			因为sort要求Random_access_iterator
+		binary_search: test if value exists in sorted sequence.
+		
+仿函数
+	是个对象，像个函数的功能
+	算术类：plus, minus
+	逻辑运算类：logical_and
+	相对关系类：equal_to, less, greater
+	GNU C++独有，非标准，identity， select1st, select2nd
+仿函数functors的可适配条件：
+	STL标准库往往会继承binary_function等类，以融入STL的体系结构，类似的还有unary_function；
+    STL规定，每个adaptable function都应该挑选适当者继承之，因为function adapter将会提问红色问题。
+	unary：argument_type, result_type
+	binary:first_argument_type, last_argument_type, result_type
+	
+适配器(改造器)
+	存在多种适配器：
+		容器适配器
+		仿函数适配器
+		迭代器适配器
+	A取用B的功能，比如set和map就可以说是rb_tree的一种容器适配器，stack和queue就是deque的一种容器适配器
+		就是取用其部分功能，并对部分功能的一些标记等进行修改，相当于一种重新封装+完善。
+	
+	function adapter:
+		bind2nd, not1, 新型适配器bind
+	iterator adapter:
+		iterator_reverser:
+			逆向的++就是正向的--
+			逆向的--就是正向的++
+		inserter
+	X adapter：未知适配器
+		ostream_iterator
+			std::ostream_iterator<int> out_it(std::cout, ","); //","作为分隔符
+			std::copy(myVec.begin(), myVec.end(), out_it);
+			cout是一个basic_ostream
+		istream_iterator
+		
+类型萃取机type traits
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
